@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&family=Festive&family=Fira+Code:wght@300&family=Josefin+Sans&family=Poppins&family=Tenor+Sans&display=swap');
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+.josefin{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.successMsg, .unauthorizedMsg{
+    display: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    margin: 0;
+    padding: 0;
+    background-color:#f1f1f1;
+}
+.profile{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+    border:5px solid#fff;
+    background-color: pink;
+    padding-top: 50px;
+    background-size: 100% 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.my_file{
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    color:transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 120px;
+    cursor: pointer;
+    transition: 0.5s;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+}
+.my_file::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.my_file::before{
+    content: '\f030';
+    font-family: fontAwesome;
+    font-size: 50px;
+    color:#fff;
+    display: inline-block;
+   -webkit-user-select-:none;
+}
+.my_file::after{
+    content:'Update';
+    font-family: 'arial';
+    font-weight: bold;
+    color:#fff;
+    display: block;
+    top: 70px;
+    font-size: 14px;
+    position: absolute;
+
+}
+.my_file:hover{
+    opacity: 1;
+}
+.black{
+    background-color: black;
+}
