@@ -28,7 +28,6 @@
     if(isset($_POST['login'])){
         $email = $_POST['login_email'];
         $password = md5($_POST['login_password']);
-        
         $sql= "SELECT * FROM ajax WHERE email = '$email' and password = '$password'";
         $query = mysqli_query($conn,$sql);
         if(mysqli_num_rows($query)>0){
@@ -99,14 +98,16 @@
     //     'output'=>$outpuut
     // };
     // echo json_encode($resp);
-    $target_directory ="files/";
-    $target_files = $target_directory.basename($_FILES["file"]["name"]);
-    $filetype = strtolower(pathinfo($target_fle,PATHINFO_EXTENSION));
-    $newfilename = $target_directory.$filename.".".$filetype;
+    // $target_directory ="files/";
+    // $target_files = $target_directory.basename($_FILES["file"]["name"]);
+    // $filetype = strtolower(pathinfo($target_fle,PATHINFO_EXTENSION));
+    // $newfilename = $target_directory.$filename.".".$filetype;
 
 
-    if(move.uploaded_file($_FILES["file"]["tmp_name"],$rowfilename)) echo 1;
-    else echo 0;
-    
+    // if(move.uploaded_file($_FILES["file"]["tmp_name"],$rowfilename)) echo 1;
+    // else echo 0;
+    if(isset($_POST['upload'])){
+        echo 'coming in ajax upload';
+    }
 
 ?>

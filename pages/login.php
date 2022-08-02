@@ -7,6 +7,7 @@ if(isset($_SESSION['id'])){
 session_destroy();
 ob_start();
 ?>
+
 <section class="black">
     <div class = "container">
         <div class = "row d-flex align-items-center" style="height:90vh">

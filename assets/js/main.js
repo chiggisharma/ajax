@@ -73,6 +73,7 @@ $(document).ready(function(){
             method : 'post',
             data: dataTologin,
             success:function(response){
+                console.log(response)
                 if(response == 'success'){
                     window.location.href = "../pages/dashboard.php";
                 }else{
@@ -107,28 +108,66 @@ $(document).ready(function(){
             }
         })
     })
+
+    //File Upload
+
+    $('.photo_form').submit(function(e){
+        // e.preventDefault();
+        // var fd = new FormData();
+        // var files = $('#uploadimage')[0].files[0];
+        // fd.append('file',files);
+        // var dataToSend = {
+        //     'fd' : fd,
+        //     'upload' : 'upload'
+        // }
+        // $.ajax({
+        //     url:"/ajax/ajax.php",
+        //     type: "POST",
+        //     data:fd,
+        //     success:function(response){
+        //         console.log(response)
+        //     },
+        //     error: function(err){
+        //         console.log(err)
+        //     }
+        // })
+    })
     
     // image upload
-  function uploadfile(){
-    var filename = $('.filename').val();
-    var file_data =$('.fileToUpload').prop('files')[0];
-    form_data.append("file",file_data);
-    form_dara.append("filename",filename);
-    $.ajax({
-        url:"./ajx.php",
-        type: "POST",
-        cache: false,
-        contentType:false,
-        processData:false,
-        data:form_data,
-        success:function(dar2){
-            if(dat2==1)alert("successful");
-            else alert("unable to upload");
-        }
+//   function uploadfile(){
+//     var filename = $('.filename').val();
+//     var file_data =$('.fileToUpload').prop('files')[0];
+//     form_data.append("file",file_data);
+//     form_dara.append("filename",filename);
+//     $.ajax({
+//         url:"./ajx.php",
+//         type: "POST",
+//         cache: false,
+//         contentType:false,
+//         processData:false,
+//         data:form_data,
+//         success:function(dar2){
+//             if(dat2==1)alert("successful");
+//             else alert("unable to upload");
+//         }
 
-    })
+//     })
 
-  }
+//   }
+
+
+
+//  another try
+    // $("#fileupload").change(function(event){
+    //     var x = URL.createObjectURL(event.target.files[0]);
+    //     $(".upload-img").attr("src",x);
+    //     console.log(event);
+    // })
+
+    $(".flip").click(function(){
+        $(".panel").slideDown("slow");
+      });
+
     //jquery end
 })
 
